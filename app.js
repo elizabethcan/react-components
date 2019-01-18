@@ -6,17 +6,15 @@
 
 var GroceryList = () => (
   <ul>
-    <Apples />
-    <Oranges />
+    <GroceryListItem items = {['apples','oranges']} />
   </ul>
 );
 
-var Apples = () => (
-  <li>Apples</li>
-);
-
-var Oranges = () => (
-  <li>Oranges</li>
-);
+var GroceryListItem = (props) => (
+  <ul>
+    <li>{props.items[0]}</li>
+    <li>{props.items[1]}</li>
+  </ul>
+)
 
 ReactDOM.render(<GroceryList />, document.getElementById("app"));
